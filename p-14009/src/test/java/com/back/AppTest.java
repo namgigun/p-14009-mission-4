@@ -130,6 +130,4 @@ public class AppTest {
                 .contains("1 / 아리스토텔레스 / 현재를 사랑하세요.")
                 .doesNotContain("1 / 작자미상 / 현재를 사랑하라.");
     }
-
-
 }

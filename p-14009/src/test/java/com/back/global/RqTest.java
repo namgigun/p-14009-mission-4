@@ -79,4 +79,15 @@ class RqTest {
         assertThat(page).isEqualTo(5);
         assertThat(searchKeyword).isEqualTo("영광");
     }
+
+    @Test
+    @DisplayName("목록?searchKeyword=영광&page=5")
+    void t9() {
+        Rq rq = new Rq("목록?searchKeyword=영광&page=5");
+        int page = rq.getParamAsInt("page", -1); // 5
+        String searchKeyword = rq.getParam("searchKeyword", ""); // "영광"
+
+        assertThat(page).isEqualTo(5);
+        assertThat(searchKeyword).isEqualTo("영광");
+    }
 }

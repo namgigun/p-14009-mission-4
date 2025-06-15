@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.back.AppTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2025-06-15T09:25:33" hostname="namgieun-ui-MacBookAir.local" time="0.052">
+  <properties/>
+  <testcase name="'== 명언 앱 ==' 출력" classname="com.back.AppTest" time="0.03"/>
+  <testcase name="등록" classname="com.back.AppTest" time="0.003"/>
+  <testcase name="등록할때 마다 생성되는 명언번호가 증가" classname="com.back.AppTest" time="0.001"/>
+  <testcase name="목록" classname="com.back.AppTest" time="0.005"/>
+  <testcase name="삭제?id=1" classname="com.back.AppTest" time="0.003"/>
+  <testcase name="`삭제?id=1`를 2번 시도했을 때의 예외처리" classname="com.back.AppTest" time="0.002"/>
+  <testcase name="수정?id=1" classname="com.back.AppTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

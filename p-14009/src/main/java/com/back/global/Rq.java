@@ -1,10 +1,13 @@
 package com.back.global;
 
+import lombok.Getter;
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+@Getter
 public class Rq {
     private final String actionName;
     private final Map<String, String> paramsMap = new HashMap<>();
@@ -17,10 +20,14 @@ public class Rq {
         if(cmdBits.length > 1) {
             String queryString = cmdBits[1].trim();
 
-            String[] part = queryString.split("=");
+            String[] part1 = queryString.split("&");
 
-            if(part.length > 1) {
-                paramsMap.put(part[0], part[1]);
+            for(String s : part1) {
+                String[] part2 = s.split("=");
+
+                if(part2.length > 1) {
+                    paramsMap.put(part2[0], part2[1]);
+                }
             }
         }
     }
