@@ -50,4 +50,33 @@ class RqTest {
 
         assertThat(searchKeyword).isEqualTo("영광");
     }
+
+    @Test
+    @DisplayName("목록")
+    void t6() {
+        Rq rq = new Rq("목록");
+        String searchKeyword = rq.getParam("searchKeyword", "");
+
+        assertThat(searchKeyword).isEqualTo("");
+    }
+
+    @Test
+    @DisplayName("목록?searchKeyword=")
+    void t7() {
+        Rq rq = new Rq("목록?searchKeyword=");
+        String searchKeyword = rq.getParam("searchKeyword", "");
+
+        assertThat(searchKeyword).isEqualTo("");
+    }
+
+    @Test
+    @DisplayName("목록?page=5&searchKeyword=영광")
+    void t8() {
+        Rq rq = new Rq("목록?page=5&searchKeyword=영광");
+        int page = rq.getParamAsInt("page", -1); // 5
+        String searchKeyword = rq.getParam("searchKeyword", ""); // "영광"
+
+        assertThat(page).isEqualTo(5);
+        assertThat(searchKeyword).isEqualTo("영광");
+    }
 }

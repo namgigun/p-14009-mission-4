@@ -32,4 +32,12 @@ public class Rq {
             return defaultValue;
         }
     }
+
+    public String getParam(String searchKeyword, String defaultValue) {
+        if(paramsMap.get(searchKeyword) == null) {
+            return defaultValue;
+        }
+
+        return paramsMap.get(searchKeyword);
+    }
 }
