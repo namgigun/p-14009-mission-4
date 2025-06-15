@@ -1,8 +1,12 @@
 package com.back;
 
+import com.back.global.Rq;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
@@ -125,5 +129,14 @@ public class AppTest {
                 .contains("작가(기존) : 작자미상")
                 .contains("1 / 아리스토텔레스 / 현재를 사랑하세요.")
                 .doesNotContain("1 / 작자미상 / 현재를 사랑하라.");
+    }
+
+    @Test
+    @DisplayName("삭제?id=1 Rq 클래스 ver")
+    void t8() {
+        Rq rq = new Rq("삭제?id=1");
+        int id = rq.getParamAsInt("id", -1);
+
+        assertThat(id).isEqualTo(1);
     }
 }
