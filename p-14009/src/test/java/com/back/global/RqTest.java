@@ -23,4 +23,13 @@ class RqTest {
 
         assertThat(id).isEqualTo(-1);
     }
+
+    @Test
+    @DisplayName("삭제?id=")
+    void t3() {
+        Rq rq = new Rq("삭제?id=");
+        int id = rq.getParamAsInt("id", -1);
+
+        assertThat(id).isEqualTo(-1);
+    }
 }

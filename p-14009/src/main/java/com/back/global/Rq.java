@@ -13,11 +13,14 @@ public class Rq {
         String[] cmdBits = cmd.split("\\?");
         actionName = cmdBits[0];
 
-        String queryString = cmdBits[1].trim();
 
-        String[] part = queryString.split("=");
+        if(cmdBits.length > 1) {
+            String queryString = cmdBits[1].trim();
 
-        paramsMap.put(part[0], part[1]);
+            String[] part = queryString.split("=");
+
+            paramsMap.put(part[0], part[1]);
+        }
     }
 
     public int getParamAsInt(String action, int i) {
