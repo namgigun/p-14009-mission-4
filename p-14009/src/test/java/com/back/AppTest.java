@@ -131,12 +131,5 @@ public class AppTest {
                 .doesNotContain("1 / 작자미상 / 현재를 사랑하라.");
     }
 
-    @Test
-    @DisplayName("삭제?id=1 Rq 클래스 ver")
-    void t8() {
-        Rq rq = new Rq("삭제?id=1");
-        int id = rq.getParamAsInt("id", -1);
 
-        assertThat(id).isEqualTo(1);
-    }
 }

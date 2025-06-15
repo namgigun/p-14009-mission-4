@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.back.AppTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-06-15T08:14:59" hostname="namgieun-ui-MacBookAir.local" time="0.027">
-  <properties/>
-  <testcase name="삭제?id=1 Rq 클래스 ver" classname="com.back.AppTest" time="0.027"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
