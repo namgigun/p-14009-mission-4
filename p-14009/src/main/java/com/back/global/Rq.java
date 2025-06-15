@@ -19,7 +19,9 @@ public class Rq {
 
             String[] part = queryString.split("=");
 
-            paramsMap.put(part[0], part[1]);
+            if(part.length > 1) {
+                paramsMap.put(part[0], part[1]);
+            }
         }
     }
 
