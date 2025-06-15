@@ -41,4 +41,13 @@ class RqTest {
 
         assertThat(id).isEqualTo(-1);
     }
+
+    @Test
+    @DisplayName("목록?searchKeyword=영광")
+    void t5() {
+        Rq rq = new Rq("목록?searchKeyword=영광");
+        String searchKeyword = rq.getParam("searchKeyword", ""); // "영광"
+
+        assertThat(searchKeyword).isEqualTo("영광");
+    }
 }

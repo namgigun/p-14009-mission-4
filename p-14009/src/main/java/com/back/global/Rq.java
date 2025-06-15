@@ -25,11 +25,11 @@ public class Rq {
         }
     }
 
-    public int getParamAsInt(String action, int i) {
-        if(paramsMap.get(action) == null) {
-            return i;
+    public int getParamAsInt(String action, int defaultValue) {
+        try {
+            return Integer.parseInt(paramsMap.get(action));
+        } catch (NullPointerException | NumberFormatException e) {
+            return defaultValue;
         }
-
-        return Integer.parseInt(paramsMap.get(action));
     }
 }
